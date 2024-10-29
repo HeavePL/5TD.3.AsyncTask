@@ -18,25 +18,7 @@ import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity {
 
-    protected String readJson(Context context, String filename){
-        String strJSON;
-        StringBuilder buf = new StringBuilder();
-        InputStream json;
-        try {
-            json = context.getAssets().open(filename);
 
-            BufferedReader in = new BufferedReader(new InputStreamReader(json, "UTF-8"));
-
-            while ((strJSON = in.readLine()) != null) {
-                buf.append(strJSON);
-            }
-            in.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return buf.toString();
-    }
 
 
     @Override
