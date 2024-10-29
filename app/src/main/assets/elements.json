@@ -1,0 +1,14 @@
+{
+  "elements": [
+    [
+      {"name": "Dom"},
+      {"description": "2 pietra"},
+      {"price": 12300}
+    ],
+    [
+      {"name": "Auto"},
+      {"description": "BWM"},
+      {"price": 10000}
+    ]
+  ]
+}
