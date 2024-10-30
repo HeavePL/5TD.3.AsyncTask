@@ -1,14 +1,12 @@
-{
-  "elements": [
-    [
-      {"name": "Dom"},
-      {"description": "2 pietra"},
-      {"price": 12300}
-    ],
-    [
-      {"name": "Auto"},
-      {"description": "BWM"},
-      {"price": 10000}
-    ]
-  ]
-}
+[
+    {
+      "name": "Dom",
+      "description": "2 pietra",
+      "price": "123000"
+    },
+    {
+    "name": "Mieszkanie",
+    "description": "",
+    "price": "123000"
+    }
+]
