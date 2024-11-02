@@ -14,14 +14,13 @@ import java.util.List;
 
 public class Element_Adapter extends ArrayAdapter<Element_Model> {
 
-    public Element_Adapter(@NonNull Context context, List<Element_Model> products) {
+    public Element_Adapter(Context context, List<Element_Model> products) {
         super(context, 0, products);
     }
 
 
-    @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+    public View getView(int position, View convertView, ViewGroup parent) {
         Element_Model element = getItem(position);
 
         if(convertView == null){

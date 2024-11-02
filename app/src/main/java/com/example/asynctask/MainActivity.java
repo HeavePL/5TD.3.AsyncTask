@@ -1,5 +1,6 @@
 package com.example.asynctask;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,15 +14,14 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    Context context = this;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-//        setContentView(R.layout.activity_main);
-        setContentView(R.layout.activity_show_all);
+        setContentView(R.layout.activity_main);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         });
         Button btnADD = findViewById(R.id.buttonAddNew);
         Button btnShow = findViewById(R.id.buttonShowAll);
+        Button btnDelete = findViewById(R.id.btnDelete);
         btnADD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,10 +42,16 @@ public class MainActivity extends AppCompatActivity {
                 showAll();
             }
         });
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new deleteJSON(context);
+            }
+        });
     }
 
     protected  void addNew(){
-        startActivity(new Intent(MainActivity.this,Add_Element.class));
+        startActivity(new Intent(getApplicationContext(),Add_Element.class));
 
 
     }

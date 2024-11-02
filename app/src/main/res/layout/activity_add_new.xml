@@ -4,7 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="vertical"
+    android:layout_marginTop="38dp"
+    android:padding="16dp"
+    tools:context=".Add_Element">
     <TextView
         android:id="@+id/textViewName"
         android:layout_width="match_parent"

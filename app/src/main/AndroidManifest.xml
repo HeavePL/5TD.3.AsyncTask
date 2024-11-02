@@ -21,6 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".DataReload"/>
+        <activity android:name=".Add_Element"/>
+        <activity android:name=".Edit_Element"/>
+
     </application>
 
 </manifest>
